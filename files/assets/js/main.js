@@ -8,7 +8,7 @@
 
 	var	$window = $(window),
 		$body = $('body'),
-		$sidebar = $('#sidebar');
+		$sidebar = $('#navlist');
 
 	// Breakpoints.
 		breakpoints({
@@ -47,7 +47,7 @@
 	// Sidebar.
 		if ($sidebar.length > 0) {
 
-			var $sidebar_a = $sidebar.find('a');
+			var $sidebar_a = $sidebar.find('.scrollbtn');
 
 			$sidebar_a
 				.addClass('scrolly')

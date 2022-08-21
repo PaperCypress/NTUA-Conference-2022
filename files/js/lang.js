@@ -34,8 +34,8 @@ $(function () {
       }
     } else {
       // no cookie set, so detect language based on location.
-        $('[lang="zh"]').hide();
-        $.cookie('lang', 'en', { expires: 7 });
+        $('[lang="en"]').hide();
+        $.cookie('lang', 'zh', { expires: 7 });
         langButtonListen();
 
     }
