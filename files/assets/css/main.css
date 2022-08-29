@@ -24,13 +24,16 @@ tfoot, thead, tr, th, td, article, aside,
 canvas, details, embed, figure, figcaption,
 footer, header, hgroup, menu, nav, output, ruby,
 section, summary, time, mark, audio, video {
-	margin: 0;
+	font-family: 'Noto Sans TC', sans-serif;
+	margin: auto 0;
 	padding: 0;
 	border: 0;
 	font-size: 100%;
 	font: inherit;
 	letter-spacing: 0.1em;
-	vertical-align: baseline;}
+	vertical-align:middle;
+
+}
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -159,7 +162,6 @@ input, select, textarea {
 		-webkit-transition: color 0.2s ease, border-bottom-color 0.2s ease;
 		-ms-transition: color 0.2s ease, border-bottom-color 0.2s ease;
 		transition: color 0.2s ease, border-bottom-color 0.2s ease;
-		border-bottom: dotted 1px rgba(255, 255, 255, 0.35);
 		color: inherit;
 		text-decoration: none;
 	}
@@ -2857,6 +2859,7 @@ input, select, textarea {
 			display: block;
 			position: relative;
 			width: 25em;
+			height: 100%;
 		}
 
 			.spotlights > section > .image img {
@@ -3440,7 +3443,7 @@ a.menu-link { display: none;
 			-webkit-transition: opacity 1s ease;
 			-ms-transition: opacity 1s ease;
 			transition: opacity 1s ease;
-			min-height: 50%;
+			min-height: 100%;
 			opacity: 1;
 			width: 100%;
 			
@@ -3454,15 +3457,17 @@ a.menu-link { display: none;
 				margin-bottom: 50px;
 				background: none;
 			}
-			#sidebar nav a > img{
+
+			#maalogo > img{
+				width: 50%;
 				display: block;
 				margin: 0 auto;
-				width: 70px;
 			}
 			#sidebar a#logo{
+				position: absolute;
 				top: 0;
 				}
-			#sidebar a#logo > img{
+			#logo > img{
 				
 				display: block;
 				margin: 0 auto;
@@ -3640,7 +3645,7 @@ a.menu-link { display: none;
 			border: 0;
 			color: rgba(255, 255, 255, 0.678);
 			display: block;
-			font-size: 0.9em;
+			font-size: 2.5vh;
 			font-weight: bold;
 			letter-spacing: 0.25em;
 			line-height: 1;
@@ -3705,7 +3710,10 @@ a.menu-link { display: none;
 			opacity: 0;
 		}
 
-		
+		#switch-lang{
+			font-size: 2vh !important;
+			margin-top: 3vh;
+		}
 		@media screen and (max-width: 1280px) {
 
 			#sidebar {
@@ -3716,9 +3724,10 @@ a.menu-link { display: none;
 			#sidebar.active{
 				left:0;
 			}
-			#sidebar nav a {
-				font-size: 1em;
+			#switch-lang{
+				font-size: 2vh;
 			}
+
 		}
 
 
@@ -3743,13 +3752,41 @@ a.menu-link { display: none;
 	right: 0;
 	bottom: 10.5vh;
   }
+  #hand{
+	position: absolute;
+	display: none;
+	height: 75vw;
+	margin: auto auto;
+	left: 0;
+	right: 0;
+	bottom: 2vh;
+	z-index: -1;
+  }
+  @media (max-aspect-ratio: 1/1) {
+	#title{
+		height: auto;
+		width: 100%;
+
+		bottom: calc(50vh - 180vw/6);
+	}
+	#background-video{
+		display: none;
+	}
+	#hand{
+		display: block;
+	}
+  }
+  @media (max-aspect-ratio: 55/100) {
+	
+	
+  }
 	#home {
 		background-attachment: fixed;
-		background: url("images/Cover.png");
-		background-position: top right;
+		background: url("../../images/bg.png");
+		background-size: cover;
+		background-position: top center;
 		background-repeat: no-repeat;
-		background-size: 100% 100%;
-
+		z-index: 1;
 	}
 
 		#intro p {
@@ -3761,12 +3798,7 @@ a.menu-link { display: none;
 				#intro p br {
 					display: none;
 				}
-				#title{
-					height: auto;
-					width: 90%;
-
-					bottom: calc(50vh - 180vw/6);
-				}
+				
 			}
 
 			@media screen and (max-width: 736px) {
@@ -3774,7 +3806,7 @@ a.menu-link { display: none;
 				#intro p {
 					font-size: 1em;
 				}
-
+				
 			}
 
 		@media screen and (max-width: 1280px) {
