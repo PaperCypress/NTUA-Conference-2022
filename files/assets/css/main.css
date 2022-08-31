@@ -3016,14 +3016,16 @@ input, select, textarea {
 			max-width: 800px;
 			width: fit-content;
 			text-align: left;
+			line-height: 1.2em;
 		}
 		table.nested td {
 			padding: 0em 0em 0 0em;
 			vertical-align: top;
+			padding-top: 1em;
 		}
 		table.nested tr {
 			border: none;
-			
+			padding-top: 1em;
 		}
 		table td.alignleft{
 			text-align: left;
