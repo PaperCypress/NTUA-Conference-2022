@@ -3910,7 +3910,7 @@ a.menu-link { display: none;
 	background-color: var(--varcolor3);
 	width: fit-content;
 	color: rgba(255, 255, 255, 0.527);
-	padding: 2px 5px;     
+	padding: 1px 11	px;     
 	border-radius: 4px;
 	margin:0 auto;
   }
