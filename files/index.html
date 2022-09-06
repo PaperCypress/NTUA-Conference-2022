@@ -7,6 +7,15 @@
 			<meta property="og:image" content="images/logo.png" />
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N6J465DEV5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-N6J465DEV5');
+</script>
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<style>
@@ -841,11 +850,17 @@
 							<h3>COMING SOON</h3>
 
 						</div>
+						
 					</section>
+					<div style="background-color: black;padding: 20px 0;"><div id="hit-counter"></div></div>
 			</div>
-
+			
+			
+			
+			
 		<!-- Footer -->
 			<footer id="footer" class="wrapper style2">
+				
 				<div class="inner">
 					<ul class="menu">
 						<li>指導單位：教育部 </li>
@@ -857,7 +872,29 @@
 					</ul>
 				</div>
 			</footer>
-
+			<script type="module">
+				// Import the functions you need from the SDKs you need
+				import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.4/firebase-app.js";
+				import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.9.4/firebase-analytics.js";
+				// TODO: Add SDKs for Firebase products that you want to use
+				// https://firebase.google.com/docs/web/setup#available-libraries
+			  
+				// Your web app's Firebase configuration
+				// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+				const firebaseConfig = {
+				  apiKey: "AIzaSyCbfbU8sklU3fhARjcjY5_QDZdU2M0uCgc",
+				  authDomain: "conference-2022-a89f3.firebaseapp.com",
+				  projectId: "conference-2022-a89f3",
+				  storageBucket: "conference-2022-a89f3.appspot.com",
+				  messagingSenderId: "682428152124",
+				  appId: "1:682428152124:web:86e3223a573689d4008639",
+				  measurementId: "G-N6J465DEV5"
+				};
+			  
+				// Initialize Firebase
+				const app = initializeApp(firebaseConfig);
+				const analytics = getAnalytics(app);
+			  </script>
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
@@ -867,7 +904,9 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script src="js/jquery.cookie.js"></script>
-
+			<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    		<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+    		<script src="counter.js"></script>
 			<script src="js/lang.js"></script>
 			<script>
 
@@ -931,7 +970,7 @@ function togglemenu(){
 
 	$(document).ready(function(){
 	$(window).scroll(function() {
-		console.log($(window).scrollTop());
+		//console.log($(window).scrollTop());
   const 
     a = $(window).scrollTop(),
     b = 800;
