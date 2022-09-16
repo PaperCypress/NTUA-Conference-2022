@@ -34,6 +34,9 @@ section, summary, time, mark, audio, video {
 	vertical-align:middle;
 
 }
+nav{
+	margin: 3vh 0 0 0;
+}
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -3468,14 +3471,29 @@ a.menu-link { display: none;
 				margin: 0 auto;
 			}
 			#sidebar a#logo{
-				position: absolute;
-				top: 0;
+				
+				
+				margin: 0 auto;
 				}
 			#logo > img{
 				
 				display: block;
 				margin: 0 auto;
 				width: 100%;
+			}
+			@media screen and (max-width: 1280px){
+				@media screen and (max-height: 702px){
+
+					#logo > img{
+				
+					display: block;
+					margin: 0 auto;
+					height: 20vh;
+					
+				}
+				}
+				
+		
 			}
 		#sidebar nav > ul {
 			list-style: none;
@@ -3828,7 +3846,9 @@ a.menu-link { display: none;
 	margin: 0 auto;
 	border-radius: 5px;
   }
-  
+  .accordion a:hover{
+	color: var(--varcolor1);
+  }
   .accordion-header,
   .accordion-body {
 	background: white;
@@ -3867,8 +3887,8 @@ a.menu-link { display: none;
   }
   
   .accordion-body__contents {
-	padding: 1.5em 1.5em;
-	font-size: .85em;
+	padding: 1.5em 50% 1.5em 5em;
+	font-size: 1em;
   }
   
   .accordion__item.active:last-child .accordion-header {
